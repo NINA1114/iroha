@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>q 自分の好きなものも大切に</title>
+    <link rel="stylesheet" href="../../../css/kiji.css" />
+    <link rel="stylesheet" href="../../../css/kyotsu.css" />
+    <link rel="icon" href="../../../../image/logo.png" />
+    <style>
+      pre.src-code {
+        width: 650px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container headercontainer">
+      <header>
+        <a href="../../../../index.html"
+          ><img src="../../../../image/logo.png" alt=""
+        /></a>
+        <ul>
+          <li><a href="../../mokuji.html">HTML</a></li>
+          <li><a href="../../mokuji2.html">CSS</a></li>
+        </ul>
+      </header>
+    </div>
+    <div class="line"></div>
+    <div class="container">
+      <main>
+        <div class="ue">
+          <h2>&lt;q&gt;引用文であることを表す（短文用）</h2>
+          <div>
+            <h4>ソースコード</h4>
+            <pre class="src-code"><ol>
+                    <li><span class="tag">&lt;p&gt;</span><span class="tag">&lt;q&gt;</span><span class="pln">真実はいつもひとつ</span><span class="tag">&lt;q&gt;</span><span class="pln">という言葉は案外、いとも簡単に<br>覆されてしまうと思う。</span><span class="tag">&lt;/p&gt;</span></li>
+                    </ol></pre>
+          </div>
+          <div>
+            <h4>実例</h4>
+            <p>
+              <q>真実はいつもひとつ</q
+              >という言葉は案外、いとも簡単に<br />覆されてしまうと思う。
+            </p>
+          </div>
+          <p>
+            文章の中で引用文として扱いたい箇所を指定する<br />一行程度の短文に有効である
+          </p>
+        </div>
+      </main>
+    </div>
+    <footer class="pagetop">
+      <a href="p.html"><img src="../../../../image/prev.png" alt="" /></a>
+      <a href="#"><img src="../../../../image/pagetop.png" alt="" /></a>
+      <a href="rt.html"><img src="../../../../image/next.png" alt="" /></a>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script>
+      const item20 = document.querySelector("body");
+      const tl20 = gsap.timeline({
+        defaults: { ease: "power0", duration: 2 },
+        repeat: -1,
+      });
+      gsap.set(item20, {
+        backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+      });
+      tl20
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #ace, #eca)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #ace, #ace)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #eca)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+        });
+    </script>
+  </body>
+</html>

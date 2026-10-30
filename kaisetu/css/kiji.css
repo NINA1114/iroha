@@ -1,0 +1,65 @@
+main {
+  font-size: 160%;
+  margin-top: 100px;
+  margin-bottom: 133px;
+}
+.ue {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 100px;
+}
+.ue img {
+  width: 100%;
+  height: auto;
+}
+pre.src-code {
+  background-color: rgb(37, 37, 37);
+  width: 600px;
+}
+pre.src-codex {
+  background-color: rgb(37, 37, 37);
+  width: 400px;
+}
+.tag {
+  color: rgb(34, 118, 243);
+}
+.atn {
+  color: rgb(141, 179, 250);
+}
+.atv {
+  color: rgb(216, 130, 98);
+}
+.pln {
+  color: white;
+}
+.src-code ol {
+  color: rgb(141, 140, 140);
+}
+.src-code-container {
+  display: flex;
+  justify-content: space-between;
+}
+.src-code-container div {
+  width: 49%;
+}
+main {
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    margin-top: -40px;
+  }
+  50% {
+    margin-top: 50px;
+  }
+  55% {
+    opacity: 1;
+  }
+}
+.kyotyo {
+  border-bottom: solid red;
+}

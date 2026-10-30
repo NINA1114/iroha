@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scroll-behavior 割と〇〇</title>
+    <link rel="stylesheet" href="../../../css/kiji.css" />
+    <link rel="stylesheet" href="../../../css/kyotsu.css" />
+    <link rel="icon" href="../../../../image/logo.png" />
+    <style>
+        .samp_box{
+            padding: 1rem;
+            background-color: #eee;
+            display:grid;
+        }
+        .samp_box>.column{
+        background-color: #fff;
+        text-align: center;
+        }
+        .nav_box{
+            padding: 1rem 0;
+            border-bottom: 1px solid #ccc;
+        }
+        .nav_box label{
+            margin: 0.5rem;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        section{
+            overflow: scroll;
+            height: 300px;
+            padding: 0 1rem;
+        }
+        section div{
+            margin-bottom: 20rem;
+            padding: 1rem 0;
+            color: #fff;
+        }
+        div>input{
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            padding: 2px;
+            width: 1.2rem;
+            height:1.2rem;
+            border: 1px solid #fff;
+            vertical-align: text-bottom;
+            
+        }
+        div > input:checked{
+          background-color: #fff;
+          background-clip: content-box;
+        }
+        #item_1 {
+          background-color: rgb(0, 119, 255);
+        }
+        #item_2 {
+          background-color: rgba(255, 22, 22, 0.767)
+        }
+        #item_3 {
+          background-color: rgb(165, 219, 157);
+        }
+      .scroll-smooth {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container headercontainer">
+      <header>
+        <a href="../../../../index.html"
+          ><img src="../../../../image/logo.png" alt=""
+        /></a>
+        <ul>
+          <li><a href="../../mokuji.html">HTML</a></li>
+          <li><a href="../../mokuji2.html">CSS</a></li>
+        </ul>
+      </header>
+    </div>
+    <div class="line"></div>
+    <div class="container">
+      <main>
+        <div class="ue">
+          <h2>scroll-behavior<br>スクロールが発生した場合の挙動を指定する</h2>
+          <div class="src-code-container">
+            <div>
+              <h4>HTML</h4>
+              <pre class="src-codex"><ol>
+                        <li><span class="tag">&lt;h1&gt;</span><span class="pln">hello</span><span class="tag">&lt;/h1&gt;</span></li>
+                        </ol></pre>
+            </div>
+            <div>
+              <h4>CSS</h4>
+              <pre class="src-codex"><ol>
+                            <li><span class="kir">h1{</span><br><span class="pln">color:green;</span><br><span class="tag">}</span></li>
+                            </ol></pre>
+            </div>
+          </div>
+          <h4>実例</h4>
+          <div class="samp_box">
+            <div class="columm">
+                <nav class="nav_box">
+                    <label for="jump_a1">割と</label>
+                    <label for="jump_a2">なん</label>
+                    <label for="jump_a3">だろう？</label>
+                  </nav>
+                  <section class="scroll-smooth">
+                    <div id="item_1">
+                      <input type="radio" name="s" id="jump_a1">頭がいい
+                    </div>
+                    <div id="item_2"> 
+                     <input type="radio" name="s" id="jump_a2">運動ができる
+                    </div>
+                    <div id="item_3">
+                      <input type="radio" name="s" id="jump_a3">優しい
+                    </div>
+                  </section>
+            </div>
+              </div>
+          </div>
+          <p>スクロールした場合の挙動を指定する<br>ここではボタンを利用してボックスの中を移動している<br>smoothと指定するとなめらかな移動になる</p>
+        </div>
+      </main>
+    </div>
+    <footer class="pagetop">
+      <a href="#"><img src="../../../../image/prev.png" alt="" /></a>
+      <a href="#"><img src="../../../../image/pagetop.png" alt="" /></a>
+      <a href="#"><img src="../../../../image/next.png" alt="" /></a>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script>
+      const item20 = document.querySelector("body");
+      const tl20 = gsap.timeline({
+        defaults: { ease: "power0", duration: 2 },
+        repeat: -1,
+      });
+      gsap.set(item20, {
+        backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+      });
+      tl20
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #ace, #eca)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #ace, #ace)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #eca)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation 楽しいほうを選ぶ</title>
+    <link rel="stylesheet" href="../../../css/kiji.css" />
+    <link rel="stylesheet" href="../../../css/kyotsu.css" />
+    <link rel="icon" href="../../../../image/logo.png" />
+    <style>
+      .animation h1 {
+        animation: 6s linear 0s infinite normal clchg;
+        font-family: cfont;
+        color: black;
+      }
+      @keyframes clchg {
+        0% {
+          background-color: red;
+          color: green;
+        }
+        20% {
+          background-color: purple;
+          color: yellow;
+        }
+        40% {
+          background-color: blue;
+          color: orange;
+        }
+        60% {
+          background-color: green;
+          color: red;
+        }
+        80% {
+          background-color: yellow;
+          color: purple;
+        }
+        100% {
+          background-color: red;
+          color: blue;
+        }
+      }
+      @font-face {
+        font-family: "cfont";
+        src: url(../../../../font/Flaemische\ Kanzleischrift.ttf);
+      }
+      .src-code-container img {
+        width: 500px;
+      }
+      pre.src-code {
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container headercontainer">
+      <header>
+        <a href="../../../../index.html"
+          ><img src="../../../../image/logo.png" alt=""
+        /></a>
+        <ul>
+          <li><a href="../../mokuji.html">HTML</a></li>
+          <li><a href="../../mokuji2.html">CSS</a></li>
+        </ul>
+      </header>
+    </div>
+    <div class="line"></div>
+    <div class="container">
+      <main>
+        <div class="ue">
+          <h2>animation<br />アニメーションに関する指定をまとめて行う</h2>
+          <div class="src-code-container">
+            <div>
+              <h4>HTML</h4>
+              <pre class="src-code"><ol>
+                        <li><span class="tag">&lt;h1&gt;</span><span class="pln">Merry Christmas</span><span class="tag">&lt;/h1&gt;</span></li>
+                        </ol></pre>
+            </div>
+            <div>
+              <h4>CSS</h4>
+              <img src="../../../../image/animation.png" alt="" />
+            </div>
+          </div>
+          <div class="animation">
+            <h4>実例</h4>
+            <h1>Merry Christmas</h1>
+          </div>
+          <p>
+            アニメーションに関するスタイルを一括で指定できる<br />時間、変化速度、開始までの時間、繰り返す回数など...<br />%で変化の段階をつける<br />色だけでなく、透明度や場所など様々な部分を変化させられる
+          </p>
+        </div>
+      </main>
+    </div>
+    <footer class="pagetop">
+      <a href="#"><img src="../../../../image/prev.png" alt="" /></a>
+      <a href="#"><img src="../../../../image/pagetop.png" alt="" /></a>
+      <a href="#"><img src="../../../../image/next.png" alt="" /></a>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script>
+      const item20 = document.querySelector("body");
+      const tl20 = gsap.timeline({
+        defaults: { ease: "power0", duration: 2 },
+        repeat: -1,
+      });
+      gsap.set(item20, {
+        backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+      });
+      tl20
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #ace, #eca)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #ace, #ace)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #eca)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+        });
+    </script>
+  </body>
+</html>

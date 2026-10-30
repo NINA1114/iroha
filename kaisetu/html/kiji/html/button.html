@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>button 特別って魅力的</title>
+    <link rel="stylesheet" href="../../../css/kiji.css" />
+    <link rel="stylesheet" href="../../../css/kyotsu.css" />
+    <link rel="icon" href="../../../../image/logo.png" />
+    <style>
+      button {
+        border: 0;
+        inline-size: 100%;
+        padding-inline: 2rem;
+        padding-block: 1rem;
+        cursor: pointer;
+        background-color: chocolate;
+        box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+          inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+        font-size: 30px;
+      }
+      .styled:active {
+        box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+          inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+      }
+      pre.src-codex {
+        width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container headercontainer">
+      <header>
+        <a href="../../../../index.html"
+          ><img src="../../../../image/logo.png" alt=""
+        /></a>
+        <ul>
+          <li><a href="../../mokuji.html">HTML</a></li>
+          <li><a href="../../mokuji2.html">CSS</a></li>
+        </ul>
+      </header>
+    </div>
+    <div class="line"></div>
+    <div class="container">
+      <main>
+        <div class="ue">
+          <h2>
+            &lt;button&gt; <br />
+            操作可能なボタンを設置する
+          </h2>
+          <div>
+            <h4>ソースコード</h4>
+            <pre class="src-code"><ol>
+                    <li><span class="tag">&lt;button</span><span class="mz"> class</span>=<span class="or">"styled"</span><span class="mz"> type</span>=<span class="or">"button"</span>&gt;<span class="pln">ポチ</span><span class="tag">&lt;/button&gt;</span></li>
+                    </ol></pre>
+          </div>
+          <div>
+            <h4>CSS</h4>
+            <pre class="src-codex"><ol>
+                          <li><span class="kir">button{</span><br><span class="mz">inline-size:</span><span class="mdr">100%;</span><br><span class="mz">padding-block:</span><span class="mdr">2rem;</span><br><span class="mz">padding-block:</span><span class="mdr">1rem;</span><br><span class="mz">background-color:</span><span class="mdr">chocolate;</span><br><span class="mz">box-shadow:</span><span class="or">inset</span><span class="mdr"> 2px 2px 3px rgba(255, 255, 255, 0.6),</span><br><span class="or">inset</span><span class="mdr">2px 2px 3px rgba(0, 0, 0, 0.6);</span><br><span class="kir">}</span>
+<span class="kir">.styled:active{</span><br><span class="mz">box-shadow:</span><span class="or">inset</span><span class="mdr">-2px -2px 3px rgba(255, 255, 255, 0.6),</span><br><span class="or">inset</span><span class="mdr">2px 2px 3px rgba(0, 0, 0, 0.6);</span>
+                              <br><span class="kir">}</span>
+                          </ol></pre>
+          </div>
+          <div>
+            <h4>実例</h4>
+            <button class="styled" type="button">ポチ</button>
+          </div>
+          <p>
+            buttonは利用者が任意のタイミングで操作可能なボタンを作成する<br />JavaScriptと組み合わせることでいろいろな用途に使える<br />typeという属性でsubmit（データをサーバーに送信する）、reset（データを初期化する）、button（何もしない）というように指定できる
+          </p>
+        </div>
+      </main>
+    </div>
+    <footer class="pagetop">
+      <a href="#"><img src="../../../../image/prev.png" alt="" /></a>
+      <a href="#"><img src="../../../../image/pagetop.png" alt="" /></a>
+      <a href="#"><img src="../../../../image/next.png" alt="" /></a>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script>
+      const item20 = document.querySelector("body");
+      const tl20 = gsap.timeline({
+        defaults: { ease: "power0", duration: 2 },
+        repeat: -1,
+      });
+      gsap.set(item20, {
+        backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+      });
+      tl20
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #ace, #eca)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #ace, #ace)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #eca)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+        });
+    </script>
+  </body>
+</html>

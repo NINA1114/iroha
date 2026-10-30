@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>br 暖かいほうが幸せ</title>
+    <link rel="stylesheet" href="../../../css/kiji.css" />
+    <link rel="stylesheet" href="../../../css/kyotsu.css" />
+    <link rel="icon" href="../../../../image/logo.png" />
+    <style>
+      pre.src-code {
+        width: 700px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container headercontainer">
+      <header>
+        <a href="../../../../index.html"
+          ><img src="../../../../image/logo.png" alt=""
+        /></a>
+        <ul>
+          <li><a href="../../mokuji.html">HTML</a></li>
+          <li><a href="../../mokuji2.html">CSS</a></li>
+        </ul>
+      </header>
+    </div>
+    <div class="line"></div>
+    <div class="container">
+      <main>
+        <div class="ue">
+          <h2>&lt;br&gt;改行を行う</h2>
+          <div>
+            <h4>ソースコード</h4>
+            <pre class="src-code"><ol>
+                    <li><span class="tag">&lt;p&gt;</span><span class="pln">私は幸せな生活を送っています。</span><span class="tag">&lt;br&gt;</span><span class="pln">あなたはどうですか？</span><span class="tag">&lt;/p&gt;</span></li>
+                    </ol></pre>
+          </div>
+          <div>
+            <h4>実例</h4>
+            <p>私は幸せな生活を送っています。<br />あなたはどうですか？</p>
+          </div>
+          <p>
+            &lt;br&gt;は文章の中で改行させたい箇所に使用する<br />同じ段落の中で改行するのに適している
+          </p>
+        </div>
+      </main>
+    </div>
+    <footer class="pagetop">
+      <a href="#"><img src="../../../../image/prev.png" alt="" /></a>
+      <a href="#"><img src="../../../../image/pagetop.png" alt="" /></a>
+      <a href="#"><img src="../../../../image/next.png" alt="" /></a>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script>
+      const item20 = document.querySelector("body");
+      const tl20 = gsap.timeline({
+        defaults: { ease: "power0", duration: 2 },
+        repeat: -1,
+      });
+      gsap.set(item20, {
+        backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+      });
+      tl20
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #ace, #eca)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #ace, #ace)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #eca)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+        });
+    </script>
+  </body>
+</html>

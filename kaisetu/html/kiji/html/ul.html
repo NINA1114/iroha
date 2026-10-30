@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ul 自分を好きでいて良い</title>
+    <link rel="stylesheet" href="../../../css/kiji.css" />
+    <link rel="stylesheet" href="../../../css/kyotsu.css" />
+    <link rel="icon" href="../../../../image/logo.png" />
+  </head>
+  <body>
+    <div class="container headercontainer">
+      <header>
+        <a href="../../../../index.html"
+          ><img src="../../../../image/logo.png" alt=""
+        /></a>
+        <ul>
+          <li><a href="../../mokuji.html">HTML</a></li>
+          <li><a href="../../mokuji2.html">CSS</a></li>
+        </ul>
+      </header>
+    </div>
+    <div class="line"></div>
+    <div class="container">
+      <main>
+        <div class="ue">
+          <h2>&lt;ul&gt;順序のないリストを作成する</h2>
+          <div>
+            <h4>ソースコード</h4>
+            <pre class="src-code">
+                        <ol>
+                        <li><span class="tag">&lt;ul&gt;</span><br></li>
+                            <li><span class="tag">&lt;li&gt;</span><span class="pln">hello</span><span class="tag">&lt;/li&gt;</span></li>
+                            <li><span class="tag">&lt;li&gt;</span><span class="pln">hi</span><span class="tag">&lt;/li&gt;</span></li>
+                            <li><span class="tag">&lt;li&gt;</span><span class="pln">hey</span><span class="tag">&lt;/li&gt;</span></li>
+                        <li><span class="tag">&lt;/ul&gt;</span></li>
+                     </ol>
+                     <ol>
+                        <li><span class="tag">&lt;ol&gt;</span></li>
+                            <li><span class="tag">&lt;li&gt;</span><span class="pln">hello</span><span class="tag">&lt;/li&gt;</span></li>
+                            <li><span class="tag">&lt;li&gt;</span><span class="pln">hi</span><span class="tag">&lt;/li&gt;</span></li>
+                            <li><span class="tag">&lt;li&gt;</span><span class="pln">hey</span><span class="tag">&lt;/li&gt;</span></li>
+                        <li><span class="tag">&lt;/ol&gt;</span></li>
+                    </ol>
+                    </pre>
+          </div>
+          <div>
+            <h4>実例</h4>
+            <ul>
+              <li>hello</li>
+              <li>hi</li>
+              <li>hey</li>
+            </ul>
+            <ol>
+              <li>hello</li>
+              <li>hi</li>
+              <li>hey</li>
+            </ol>
+          </div>
+          <p>
+            ulはunorderlistの略で順番のないリストを表示する<br />olはorderlistの略で順番のあるリストを表示する<br />liはそのままlist
+          </p>
+        </div>
+      </main>
+    </div>
+    <footer class="pagetop">
+      <a href="#"><img src="../../../../image/prev.png" alt="" /></a>
+      <a href="#"><img src="../../../../image/pagetop.png" alt="" /></a>
+      <a href="#"><img src="../../../../image/next.png" alt="" /></a>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script>
+      const item20 = document.querySelector("body");
+      const tl20 = gsap.timeline({
+        defaults: { ease: "power0", duration: 2 },
+        repeat: -1,
+      });
+      gsap.set(item20, {
+        backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+      });
+      tl20
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #ace, #eca)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #ace, #ace)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #eca)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+        });
+    </script>
+  </body>
+</html>

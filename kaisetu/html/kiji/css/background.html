@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background ダサもまた良し</title>
+    <link rel="stylesheet" href="../../../css/kiji.css" />
+    <link rel="stylesheet" href="../../../css/kyotsu.css" />
+    <link rel="icon" href="../../../../image/logo.png" />
+    <style>
+      body {
+        background: url(../../../../image/hanabatake.jpg) fixed;
+        background-size: cover;
+      }
+      h1 {
+        height: 100px;
+        width: 500px;
+        background: green;
+        font-size: 45px;
+        color: yellow;
+      }
+      h3 {
+        height: 100px;
+        width: 500px;
+        font-size: 45px;
+        transform: rotateX(180deg);
+        background: green;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container headercontainer">
+      <header>
+        <a href="../../../../index.html"
+          ><img src="../../../../image/logo.png" alt=""
+        /></a>
+        <ul>
+          <li><a href="../../mokuji.html">HTML</a></li>
+          <li><a href="../../mokuji2.html">CSS</a></li>
+        </ul>
+      </header>
+    </div>
+    <div class="line"></div>
+    <div class="container">
+      <main>
+        <div class="ue">
+          <h2>background <br />要素の背景に関する指定をまとめて行う</h2>
+          <div class="src-code-container">
+            <div>
+              <h4>HTML</h4>
+              <pre class="src-codex"><ol>
+                        <li><span class="tag">&lt;h1&gt;</span><span class="pln">人は鏡</span><span class="tag">&lt;/h1&gt;</span><br><span class="tag">&lt;h3&gt;</span><span class="pln">人は鏡</span><span class="tag">&lt;/h3&gt;</span></li>
+                        </ol></pre>
+            </div>
+            <div>
+              <h4>CSS</h4>
+              <pre class="src-codex"><ol>
+                            <li><span class="kir">body{</span><br><span class="mz">background</span>:<span class="mdr">url</span><span class="mz">画像の名前</span> <span class="or">fixed</span>;<br><span class="tag">}</span><br><span class="tag">h1{</span><br><span class="mz">background</span>:<span class="or">green</span>;<br><span class="mz">height</span>:<span class="mdr">100px</span>;<br><span class="mz">width</span>:<span class="mdr">500px</span>;<br><span class="tag">}</span><br><span class="tag">h3{</span><br><span class="mz">background</span>:<span class="or">green</span>;<br><span class="mz">height</span>:<span class="mdr">100px</span>;<br><span class="mz">width</span>:<span class="mdr">500px</span>;<br><span class="kir">}</span></li>
+                            </ol></pre>
+            </div>
+          </div>
+          <div>
+            <h4>実例</h4>
+            <h1>人は鏡</h1>
+            <h3>人は鏡</h3>
+          </div>
+          <p>
+            背景の画像、色などを一括で指定する<br />fixedはスクロールされても背景が動かないようにしている
+          </p>
+        </div>
+      </main>
+    </div>
+    <footer class="pagetop">
+      <a href="#"><img src="../../../../image/prev.png" alt="" /></a>
+      <a href="#"><img src="../../../../image/pagetop.png" alt="" /></a>
+      <a href="#"><img src="../../../../image/next.png" alt="" /></a>
+    </footer>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script>
+      const item20 = document.querySelector("body");
+      const tl20 = gsap.timeline({
+        defaults: { ease: "power0", duration: 2 },
+        repeat: -1,
+      });
+      gsap.set(item20, {
+        backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+      });
+      tl20
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #ace, #eca)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #ace, #ace)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #eca)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+        });
+    </script> -->
+  </body>
+</html>

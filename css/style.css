@@ -1,0 +1,239 @@
+@font-face {
+  font-family: "MyFont";
+  src: url(../font/ipagp.ttf);
+}
+* {
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+}
+.hm body {
+  font-size: 1.5rem;
+  font-family: MyFont;
+  font-weight: 600;
+  color: #ffffff;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    -45deg,
+    #cdddff,
+    #000107
+  ); /*グラデーションを定義*/
+  background-size: 200% 200%; /*サイズを大きくひきのばす*/
+  animation: bggradient 20s ease infinite;
+}
+/* もくじ */
+.line {
+  background-color: #ffffff;
+}
+.tags h1 {
+  margin-top: 50px;
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+.tags a {
+  text-decoration: none;
+}
+.updown {
+  animation-name: updown1;
+  animation-delay: 0s;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes updown1 {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -20px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+/* もくじ */
+.container {
+  margin: 0 auto;
+}
+.top {
+  position: relative;
+  height: 50vh;
+  padding: 30px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.title h1 {
+  text-align: right;
+  font-size: 10rem;
+  color: white;
+}
+
+.stmi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 80%;
+  width: 250px;
+}
+.stmi h2 {
+  font-size: 4rem;
+  color: white;
+}
+.yoko {
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+}
+.setumei-img img {
+  width: 300px;
+  height: auto;
+  margin-left: 200px;
+}
+.mokuji {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent;
+  margin-top: 100px;
+}
+.mokuji h1 {
+  padding-top: 50px;
+  font-size: 50px;
+  color: white;
+}
+.mokuji a {
+  color: #ffffff;
+  font-weight: 600;
+}
+.url {
+  padding-top: 70px;
+}
+.url a {
+  font-size: 55px;
+  color: white;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+.hm a {
+  transition: all 1s;
+}
+.ht a {
+  transition: all 1s;
+}
+.ml a {
+  transition: all 1s;
+}
+.hm a:hover {
+  color: rgb(160, 211, 167);
+}
+.ht a:hover {
+  color: rgb(241, 200, 154);
+}
+.ml a:hover {
+  color: rgb(172, 222, 241);
+}
+.ht {
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.ml {
+  padding: 10px;
+  text-align: center;
+}
+.gnavi {
+  list-style: none;
+  margin: 0 0 50px 0;
+}
+
+.gnavi li {
+  position: relative;
+}
+.gnavi li::before,
+.gnavi li::after {
+  content: "";
+  position: absolute;
+  background: white;
+  width: 0;
+  height: 2px;
+  transition: all 0.2s linear;
+}
+.gnavi li::before {
+  right: 0;
+  bottom: 0;
+}
+.gnavi li::after {
+  left: 0;
+  top: 0;
+}
+.gnavi li span::before,
+.gnavi li span::after {
+  content: "";
+  position: absolute;
+  background: white;
+  width: 2px;
+  height: 0;
+  transition: all 0.1s linear;
+}
+.gnavi li span::before {
+  left: 0;
+  bottom: 0;
+}
+.gnavi li span::after {
+  right: 0;
+  top: 0;
+}
+.gnavi li.current::before,
+.gnavi li.current::after,
+.gnavi li:hover::before,
+.gnavi li:hover::after {
+  width: 100%;
+}
+.gnavi li:hover::after {
+  transition-delay: 0s;
+}
+.gnavi li:hover::before {
+  transition-delay: 0.3s;
+}
+.gnavi li.current span::before,
+.gnavi li.current span::after,
+.gnavi li:hover span::before,
+.gnavi li:hover span::after {
+  height: 100%;
+}
+.gnavi li:hover span::before {
+  transition-delay: 0.5s;
+}
+.gnavi li:hover span::after {
+  transition-delay: 0.2s;
+}
+/* .mokuji {
+  animation-name: fadein;
+  animation-duration: 7s;
+  animation-timing-function: ease-out;
+} */
+/* @keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 1;
+  }
+} */
+/* @keyframes bggradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>i 別れも必要</title>
+    <link rel="stylesheet" href="../../../css/kiji.css" />
+    <link rel="stylesheet" href="../../../css/kyotsu.css" />
+    <link rel="icon" href="../../../../image/logo.png" />
+    <style>
+      pre.src-code {
+        width: 760px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container headercontainer">
+      <header>
+        <a href="../../../../index.html"
+          ><img src="../../../../image/logo.png" alt=""
+        /></a>
+        <ul>
+          <li><a href="../../mokuji.html">HTML</a></li>
+          <li><a href="../../mokuji2.html">CSS</a></li>
+        </ul>
+      </header>
+    </div>
+    <div class="line"></div>
+    <div class="container">
+      <main>
+        <div class="ue">
+          <h2>&lt;i&gt;<br />文章の中で慣用句や特定の用語を表す</h2>
+          <div>
+            <h4>ソースコード</h4>
+            <pre class="src-code"><ol>
+                    <li><span class="tag">&lt;p&gt;</span><br><span class="pln">猫（</span><span class="tag">&lt;i&gt;</span><span class="pln">Felis silvestris catusフェーリスト・シルウェストリス・カトゥス</span><br><span class="tag">&lt;/i&gt;</span><span class="pln">）は、いつでも、どこでも、愛されるべくして愛されている動物である。<br>猫のくせに学名に「リス」が2回も入っているとは、なんともかわいい。</span><br><span class="tag">&lt;/p&gt;</span></li>
+                    </ol></pre>
+          </div>
+          <div>
+            <h4>実例</h4>
+            <p>
+              猫（<i
+                >Felis silvestris
+                catusフェーリスト・シルウェストリス・カトゥス</i
+              >）は、いつでも、どこでも、愛されるべくして愛されている動物である。猫のくせに学名に「リス」が2回も入っているとは、なんともかわいい。
+            </p>
+          </div>
+          <p>
+            慣用句や特定の用語など前後の言葉とは区別したい箇所に使用する<br />例えば、技術的な専門用語、学術的な言葉、あるいは誰かが言ったことわざや慣用句など<br />文字の見た目を斜体にできる
+          </p>
+        </div>
+      </main>
+    </div>
+    <footer class="pagetop">
+      <a href="#"><img src="../../../../image/prev.png" alt="" /></a>
+      <a href="#"><img src="../../../../image/pagetop.png" alt="" /></a>
+      <a href="#"><img src="../../../../image/next.png" alt="" /></a>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script>
+      const item20 = document.querySelector("body");
+      const tl20 = gsap.timeline({
+        defaults: { ease: "power0", duration: 2 },
+        repeat: -1,
+      });
+      gsap.set(item20, {
+        backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+      });
+      tl20
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #ace, #eca)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #ace, #ace)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #eca)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+        });
+    </script>
+  </body>
+</html>

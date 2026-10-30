@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML,CSSのいろは</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./image/logo.png" />
+    <link rel="stylesheet" href="./kaisetu/css/mokuji.css" />
+    <link rel="stylesheet" href="./kaisetu/css/kyotsu.css" />
+  </head>
+  <body class="hm" data-barba="wrapper">
+    <div class="container" data-barba="container" data-barba-namespace="home">
+      <div class="top">
+        <div class="title">
+          <h1>HTML・CSS<br />の<br />いろは</h1>
+        </div>
+      </div>
+      <div class="yoko">
+        <div class="stmi">
+          <div class="setumei"><h2>H</h2></div>
+          <div class="setumei"><h2>T</h2></div>
+          <div class="setumei"><h2>M</h2></div>
+          <div class="setumei"><h2>L</h2></div>
+          <div class="setumei"><h2>、</h2></div>
+          <div class="setumei"><h2>C</h2></div>
+          <div class="setumei"><h2>S</h2></div>
+          <div class="setumei"><h2>S</h2></div>
+          <div class="setumei"><h2>の</h2></div>
+          <div class="setumei"><h2>基</h2></div>
+          <div class="setumei"><h2>本</h2></div>
+          <div class="setumei"><h2>を</h2></div>
+          <div class="setumei"><h2>簡</h2></div>
+          <div class="setumei"><h2>単</h2></div>
+          <div class="setumei"><h2>に</h2></div>
+          <div class="setumei"><h2>ま</h2></div>
+          <div class="setumei"><h2>と</h2></div>
+          <div class="setumei"><h2>め</h2></div>
+          <div class="setumei"><h2>ま</h2></div>
+          <div class="setumei"><h2>し</h2></div>
+          <div class="setumei"><h2>た</h2></div>
+          <div class="setumei"><h2>。</h2></div>
+          <div class="setumei"><h2>初</h2></div>
+          <div class="setumei"><h2>心</h2></div>
+          <div class="setumei"><h2>者</h2></div>
+          <div class="setumei"><h2>に</h2></div>
+          <div class="setumei"><h2>よ</h2></div>
+          <div class="setumei"><h2>る</h2></div>
+          <div class="setumei"><h2>初</h2></div>
+          <div class="setumei"><h2>心</h2></div>
+          <div class="setumei"><h2>者</h2></div>
+          <div class="setumei"><h2>の</h2></div>
+          <div class="setumei"><h2>た</h2></div>
+          <div class="setumei"><h2>め</h2></div>
+          <div class="setumei"><h2>の</h2></div>
+          <div class="setumei"><h2>ホ</h2></div>
+          <div class="setumei"><h2>ー</h2></div>
+          <div class="setumei"><h2>ム</h2></div>
+          <div class="setumei"><h2>ぺ</h2></div>
+          <div class="setumei"><h2>ー</h2></div>
+          <div class="setumei"><h2>ジ</h2></div>
+        </div>
+        <div class="setumei-img">
+          <img src="./image/logo.png" alt="" />
+        </div>
+      </div>
+      <div class="mokuji">
+        <h1>もくじ</h1>
+        <div class="url">
+          <ul class="gnavi">
+            <li class="ht">
+              <a href="./kaisetu/html/mokuji.html"><span>HTML</span></a>
+            </li>
+            <li class="ml">
+              <a href="./kaisetu/html/mokuji2.html"><span>CSS</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script>
+      barba.init({
+        transitions: [
+          {
+            async leave(data) {
+              const done = this.async();
+              leaveAnimation();
+              await delay(3000);
+              done();
+            },
+            async enter(data) {
+              enterAnimation();
+            },
+          },
+        ],
+      });
+      // 遅延用 引数の分だけ処理を遅らせる
+      function delay(n) {
+        n = n || 2000;
+        return new Promise((done) => {
+          setTimeout(() => {
+            done();
+          }, n);
+        });
+      }
+      // ページを離れる時の上に消える動作
+      function leaveAnimation() {
+        const tl = gsap.timeline();
+        tl.to(".container", {
+          duration: 1,
+          x: 100,
+          opacity: 0,
+          ease: "Quart.easeOut",
+          onComplete: () => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          },
+        });
+      }
+      // ページに入った時の下から出てくる動作
+      function enterAnimation() {
+        const tl = gsap.timeline();
+        tl.from(".container", {
+          duration: 1,
+          x: 100,
+          opacity: 0,
+          ease: "Quart.easeOut",
+        });
+      }
+    </script>
+    <script>
+      gsap.from(".setumei", {
+        y: 10,
+        autoAlpha: 0,
+        duration: 1,
+        ease: "power4.out",
+        stagger: 0.1,
+      });
+    </script>
+    <script>
+      const item20 = document.querySelector("body");
+      const tl20 = gsap.timeline({
+        defaults: { ease: "power0", duration: 2 },
+        repeat: -1,
+      });
+      gsap.set(item20, {
+        backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+      });
+      tl20
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #ace, #eca)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #ace, #ace)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #eca)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+        });
+    </script>
+  </body>
+</html>

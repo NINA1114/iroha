@@ -1,0 +1,119 @@
+.mk {
+  color: white;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    -45deg,
+    #cdddff,
+    #000107
+  ); /*グラデーションを定義*/
+  background-size: 600% 600%; /*サイズを大きくひきのばす*/
+  animation: bggradient 20s ease infinite;
+}
+.header {
+  background-color: transparent;
+}
+.header a {
+  color: #ffffff;
+}
+
+.line {
+  background-color: #ffffff;
+}
+.tags h1 {
+  margin-top: 50px;
+  border-bottom: 3px solid rgb(255, 255, 255);
+  color: white;
+  font-size: 30px;
+}
+.tags a {
+  text-decoration: none;
+  color: white;
+  margin-right: 15px;
+}
+.tags a span {
+  transition: all 1s;
+}
+.tags a:hover span {
+  color: rgb(250, 172, 83);
+  transform: scale(1.5);
+  display: inline-block;
+}
+.tags p {
+  font-weight: 600;
+  color: white;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.tagsc h1 {
+  margin-top: 50px;
+  border-bottom: 3px solid rgb(255, 255, 255);
+  color: white;
+  font-size: 30px;
+}
+.tagsc a {
+  text-decoration: none;
+  color: white;
+  margin-right: 15px;
+}
+.tagsc a span {
+  transition: all 1s;
+}
+.tagsc a:hover span {
+  color: rgb(83, 203, 250);
+  transform: scale(1.5);
+  display: inline-block;
+}
+.tagsc p {
+  font-weight: 600;
+  color: white;
+  font-size: 16px;
+  margin-top: 10px;
+}
+main {
+  /* animation-name: fadein;
+  animation-duration: 2s;
+  animation-timing-function: ease-out; */
+  padding-top: 100px;
+}
+.updown {
+  animation-name: updown1;
+  animation-delay: 0s;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes updown1 {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -20px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+/* @keyframes fadein {
+  0% {
+    opacity: 0;
+    margin-top: -40px;
+  }
+  50% {
+    margin-top: 100px;
+  }
+  55% {
+    opacity: 1;
+  }
+} */
+/* @keyframes bggradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */

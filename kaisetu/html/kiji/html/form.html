@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form 頑張りすぎるのは良くない</title>
+    <link rel="stylesheet" href="../../../css/kiji.css" />
+    <link rel="stylesheet" href="../../../css/kyotsu.css" />
+    <link rel="icon" href="../../../../image/logo.png" />
+  </head>
+  <body>
+    <div class="container headercontainer">
+      <header>
+        <a href="../../../../index.html"
+          ><img src="../../../../image/logo.png" alt=""
+        /></a>
+        <ul>
+          <li><a href="../../mokuji.html">HTML</a></li>
+          <li><a href="../../mokuji2.html">CSS</a></li>
+        </ul>
+      </header>
+    </div>
+    <div class="line"></div>
+    <div class="container">
+      <main>
+        <div class="ue">
+          <h2>&lt;form&gt;<br />入力・送信用のフォームを作成する</h2>
+          <div>
+            <h4>ソースコード</h4>
+            <img src="../../../../image/form.png" alt="" />
+          </div>
+          <div>
+            <h4>実例</h4>
+            <form action="">
+              好きな野菜:
+              <input type="text" name="yasai" size="20" /><br /><br />
+              好きな色:
+              <input type="color" name="iro" /><br /><br />
+              好きな数字(この中で):
+              <select name="suji">
+                <option value="1">1</option>
+                <option value="14">14</option>
+                <option value="9">9</option>
+                <option value="76">76</option>
+                <option value="33">33</option></select
+              ><br /><br />
+              好きなおにぎりの具:<br />
+              <input type="checkbox" name="onigiri" value="ume" />梅干し
+              <input type="checkbox" name="onigiri" value="konbu" />昆布
+              <input type="checkbox" name="onigiri" value="tsuna" />ツナマヨ
+              <input type="checkbox" name="onigiri" value="" />塩
+              <input type="checkbox" name="onigiri" value="takana" />高菜
+            </form>
+          </div>
+          <p>情報を送信するための入力フォームを作成するときに使う<br /></p>
+        </div>
+      </main>
+    </div>
+    <footer class="pagetop">
+      <a href="#"><img src="../../../../image/prev.png" alt="" /></a>
+      <a href="#"><img src="../../../../image/pagetop.png" alt="" /></a>
+      <a href="#"><img src="../../../../image/next.png" alt="" /></a>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script>
+      const item20 = document.querySelector("body");
+      const tl20 = gsap.timeline({
+        defaults: { ease: "power0", duration: 2 },
+        repeat: -1,
+      });
+      gsap.set(item20, {
+        backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+      });
+      tl20
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #ace, #eca)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #ace, #ace)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #eca)",
+        })
+        .to(item20, {
+          backgroundImage: "linear-gradient(45deg, #eca, #ace)",
+        });
+    </script>
+  </body>
+</html>
